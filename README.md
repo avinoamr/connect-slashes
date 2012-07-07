@@ -1,9 +1,6 @@
 connect-slashes
 ===============
 
-Slash redirects for Connect connect-slashes
-===============
-
 Trailing slash redirect middleware for Connect. Useful for creating canonical urls in your Node.js applications.
 
 ## Installation
