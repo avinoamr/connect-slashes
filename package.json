@@ -1,0 +1,11 @@
+{
+    "name": "connect-slashes"
+  , "version": "0.0.1"
+  , "description": "Connect trailing slashes middleware"
+  , "keywords": ["slashes", "connect", "middleware"]
+  , "author": "Roi Avinoam <avinoamr@gmail.com"
+  , "dependencies": {
+  }
+  , "main": "index"
+  , "engines": { "node": "*" }
+}
