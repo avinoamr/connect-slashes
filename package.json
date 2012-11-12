@@ -1,6 +1,6 @@
 {
     "name": "connect-slashes"
-  , "version": "0.0.4"
+  , "version": "0.0.5"
   , "description": "Trailing slash redirect middleware for Connect"
   , "keywords": ["trailing", "slash", "connect", "middleware"]
   , "author": "Roi Avinoam <avinoamr@gmail.com>"
