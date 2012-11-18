@@ -8,6 +8,10 @@
         "Feross Aboukhadijeh <feross@feross.org> (http://feross.org)"
       , "brunogfranca (https://github.com/brunogfranca)"
   ]
+  , "repository": {
+        "type": "git"
+      , "url": "git@github.com:avinoamr/connect-slashes.git"
+  }
   , "dependencies": {}
   , "main": "index"
   , "engines": { "node": "*" }
