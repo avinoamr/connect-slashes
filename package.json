@@ -1,9 +1,13 @@
 {
     "name": "connect-slashes"
-  , "version": "0.0.5"
+  , "version": "0.0.9"
   , "description": "Trailing slash redirect middleware for Connect"
   , "keywords": ["trailing", "slash", "connect", "middleware"]
   , "author": "Roi Avinoam <avinoamr@gmail.com>"
+  , "contributors": [
+        "Feross Aboukhadijeh <feross@feross.org> (http://feross.org)"
+      , "brunogfranca (https://github.com/brunogfranca)"
+  ]
   , "dependencies": {}
   , "main": "index"
   , "engines": { "node": "*" }
