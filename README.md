@@ -32,3 +32,7 @@ Alternatively, you can pass `false` as the only argument to `.slashes()` in orde
 
 1. Only GET requests will be redirected (to avoid losing POST/PUT data)
 2. This middleware will append or removes a trailing slash to all request urls. This includes filenames (/app.css => /app.css/), so it may break your static files. Make sure to `.use()` this middleware only after the `connect.static()` middleware. 
+
+## LICENSE
+
+MIT
