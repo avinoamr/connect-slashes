@@ -1,6 +1,6 @@
 {
     "name": "connect-slashes",
-    "version": "0.0.11",
+    "version": "1.0.2",
     "description": "Trailing slash redirect middleware for Connect",
     "keywords": [ "trailing", "slash", "connect", "middleware" ],
     "author": "Roi Avinoam <avinoamr@gmail.com>",
@@ -12,7 +12,9 @@
         "type": "git",
         "url": "https://github.com/avinoamr/connect-slashes.git"
     },
-    "dependencies": {},
+    "devDependencies": {
+        "mocha": "~1.14.0"
+    },
     "main": "index",
     "license": "MIT",
     "engines": { 
