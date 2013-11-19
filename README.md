@@ -1,7 +1,7 @@
 connect-slashes
 ===============
 
-Trailing slash redirect middleware for Connect. Useful for creating canonical urls in your Node.js applications.
+Trailing slash redirect middleware for Connect and Express.js. Useful for creating canonical urls in your Node.js applications.
 
 ## Installation
 
