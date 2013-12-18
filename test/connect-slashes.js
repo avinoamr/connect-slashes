@@ -52,7 +52,19 @@ describe( "connect-slashes", function() {
     it( "should move permanenetly (301)", function( done ) {
         append( { method: "GET", url: "/foo" }, {
             writeHead: function( status, headers ) {
-                assert( status == 301 )
+                assert( status == 301 );
+            },
+            end: done
+        }, function() {
+            assert( false ); // no redirect took place
+        } );
+    });
+
+    //
+    it( "should control the redirect status code", function( done ) {
+        slashes( true, { code: 305 } )( { method: "GET", url: "/foo" }, {
+            writeHead: function( status, headers ) {
+                assert( status == 305 );
             },
             end: done
         }, function() {
