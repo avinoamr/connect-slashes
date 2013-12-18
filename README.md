@@ -19,25 +19,27 @@ connect()
   .use(connect.logger())
   .use(connect.static())
   .use(slashes())
-  .listen(3000); 
+  .listen(3000);
 ```
 
-Alternatively, you can pass `false` as the only argument to `.slashes()` in order to remove trailing slashes instead of appending them:
+Alternatively, you can pass `false` as the first argument to `.slashes()` in order to remove trailing slashes instead of appending them:
 
 ```javascript
 .use(slashes(false));
-``` 
+```
 
-If an application is behind a reverse proxy server that removes part of the URL (a base_path) before proxying to the application, then the base_path must can be specified with an option:
+## Additional settings
+
+You can also pass a second argument with an options object. For example, if an application is behind a reverse proxy server that removes part of the URL (a base_path) before proxying to the application, then the base_path can be specified with an option:
 
 ```javascript
-.use(slashes({append: false, base_path: '/blog'}));
+.use(slashes(true, { base: "/blog" })); // prepends a base url to the redirect
 ```
 
 ## Notes
 
 1. Only GET requests will be redirected (to avoid losing POST/PUT data)
-2. This middleware will append or removes a trailing slash to all request urls. This includes filenames (/app.css => /app.css/), so it may break your static files. Make sure to `.use()` this middleware only after the `connect.static()` middleware. 
+2. This middleware will append or remove a trailing slash to all request urls. This includes filenames (/app.css => /app.css/), so it may break your static files. Make sure to `.use()` this middleware only after the `connect.static()` middleware.
 
 ## LICENSE
 

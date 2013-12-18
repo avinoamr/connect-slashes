@@ -29,7 +29,7 @@ describe( "connect-slashes", function() {
         append( { method: "GET", url: "/foo" }, {
             writeHead: function( status, headers ) {
                 assert( "/foo/" == headers.Location );
-            }, 
+            },
             end: done
         }, function() {
             assert( false ); // no redirect took place
@@ -41,7 +41,7 @@ describe( "connect-slashes", function() {
         slashes( false )( { method: "GET", url: "/foo/" }, {
             writeHead: function( status, headers ) {
                 assert( "/foo" == headers.Location );
-            }, 
+            },
             end: done
         }, function() {
             assert( false ); // no redirect took place
@@ -53,7 +53,7 @@ describe( "connect-slashes", function() {
         append( { method: "GET", url: "/foo" }, {
             writeHead: function( status, headers ) {
                 assert( status == 301 )
-            }, 
+            },
             end: done
         }, function() {
             assert( false ); // no redirect took place
@@ -96,5 +96,28 @@ describe( "connect-slashes", function() {
         })
     });
 
+    //
+    it( "should prepend the base_path argument", function( done ) {
+        slashes( true, { base: "/foo/" } )( { method: "GET", url: "/bar/world" }, {
+            writeHead: function( status, headers ) {
+                assert( "/foo/bar/world/" == headers.Location );
+            },
+            end: done
+        }, function() {
+            assert( false ); // no redirect took place
+        });
+    });
+
+    //
+    it( "should prepend a first slash", function( done ) {
+        append( { method: "GET", url: "bar/world" }, {
+            writeHead: function( status, headers ) {
+                assert( "/bar/world/" == headers.Location );
+            },
+            end: done
+        }, function() {
+            assert( false ); // no redirect took place
+        });
+    });
 
 } );
