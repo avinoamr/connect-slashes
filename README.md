@@ -28,6 +28,12 @@ Alternatively, you can pass `false` as the only argument to `.slashes()` in orde
 .use(slashes(false));
 ``` 
 
+If an application is behind a reverse proxy server that removes part of the URL (a base_path) before proxying to the application, then the base_path must can be specified with an option:
+
+```javascript
+.use(slashes({append: false, base_path: '/blog'}));
+```
+
 ## Notes
 
 1. Only GET requests will be redirected (to avoid losing POST/PUT data)
