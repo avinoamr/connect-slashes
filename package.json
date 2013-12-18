@@ -1,8 +1,8 @@
 {
     "name": "connect-slashes",
-    "version": "1.0.2",
-    "description": "Trailing slash redirect middleware for Connect",
-    "keywords": [ "trailing", "slash", "connect", "middleware" ],
+    "version": "1.1.0",
+    "description": "Trailing slash redirect middleware for Connect and Express.js",
+    "keywords": [ "trailing", "slash", "connect", "middleware", "express" ],
     "author": "Roi Avinoam <avinoamr@gmail.com>",
     "contributors": [
         "Feross Aboukhadijeh <feross@feross.org> (http://feross.org)",
@@ -17,7 +17,7 @@
     },
     "main": "index",
     "license": "MIT",
-    "engines": { 
+    "engines": {
         "node": "*"
     }
 }
