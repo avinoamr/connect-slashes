@@ -30,10 +30,7 @@ Alternatively, you can pass `false` as the first argument to `.slashes()` in ord
 
 ## Additional settings
 
-You can also pass a second argument with an options object.
-
-# base
-For example, if an application is behind a reverse proxy server that removes part of the URL (a base_path) before proxying to the application, then the `base` can be specified with an option:
+You can also pass a second argument with an options object. For example, if an application is behind a reverse proxy server that removes part of the URL (a base_path) before proxying to the application, then the `base` can be specified with an option:
 
 ```javascript
 .use(slashes(true, { base: "/blog" })); // prepends a base url to the redirect
