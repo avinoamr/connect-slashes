@@ -1,5 +1,5 @@
 var slashes = require( ".." ),
-    assert = require( "assert" )
+    assert = require( "assert" ),
     http = require( "http" );
 
 var append = slashes( true );
@@ -130,6 +130,19 @@ describe( "connect-slashes", function() {
         }, function() {
             assert( false ); // no redirect took place
         });
+    });
+
+    it( "should set headers", function( done ) {
+        slashes( true, { headers: { "Cache-Control": "public" } } )( { method: "GET", url: "/foo" }, {
+            writeHead: function( status, headers ) {
+                assert( "public" == headers["Cache-Control"] );
+                assert( "/foo/" == headers.Location );
+            },
+            end: done
+
+        }, function() {
+            assert( false ); // no redirect took place
+        } );
     });
 
 } );
