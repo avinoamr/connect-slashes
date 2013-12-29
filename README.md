@@ -36,10 +36,16 @@ You can also pass a second argument with an options object. For example, if an a
 .use(slashes(true, { base: "/blog" })); // prepends a base url to the redirect
 ```
 
-By default, all redirects are using the 301 Moved Permanently header. You can change this behavior by passing in the optional `code` directive:
+By default, all redirects are using the 301 Moved Permanently header. You can change this behavior by passing in the optional `code` option:
 
 ```javascript
 .use(slashes(true, { code: 302 })); // 302 Temporary redirects
+```
+
+You can also set additional headers to the redirect response with the `headers` option:
+
+```javascript
+.use(slashes(true, { headers: { "Cache-Control": "public" } }));
 ```
 
 ## Notes
