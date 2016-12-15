@@ -16,7 +16,6 @@ var connect = require("connect")
   , slashes = require("connect-slashes");
 
 connect() // or express()
-  .use(connect.logger())
   .use(connect.static())
   .use(slashes())
   .listen(3000);
