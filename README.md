@@ -15,7 +15,7 @@ $ npm install connect-slashes
 var connect = require("connect")
   , slashes = require("connect-slashes");
 
-connect()
+connect() // or express()
   .use(connect.logger())
   .use(connect.static())
   .use(slashes())
