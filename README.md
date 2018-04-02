@@ -17,7 +17,7 @@ var connect = require("connect")
 
 connect() // or express()
   .use(connect.static())
-  .use(slashes())
+  .use(slashes()) // must come after static middleware!
   .listen(3000);
 ```
 
