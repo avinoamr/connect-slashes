@@ -49,6 +49,18 @@ describe( "connect-slashes", function() {
     });
 
     //
+    it( "should append slashes for OPTIONS requests", function( done ) {
+        append( { method: "OPTIONS", url: "/foo" }, {
+            writeHead: function( status, headers ) {
+                assert( "/foo/" == headers.Location );
+            },
+            end: done
+        }, function() {
+            assert( false ); // no redirect took place
+        } );
+    });
+
+    //
     it( "should append slashes for GET requests using originalUrl", function( done ) {
         append( { method: "GET", originalUrl: "/foo" }, {
             writeHead: function( status, headers ) {
