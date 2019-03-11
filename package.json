@@ -2,7 +2,13 @@
     "name": "connect-slashes",
     "version": "1.3.1",
     "description": "Trailing slash redirect middleware for Connect and Express.js",
-    "keywords": [ "trailing", "slash", "connect", "middleware", "express" ],
+    "keywords": [
+        "trailing",
+        "slash",
+        "connect",
+        "middleware",
+        "express"
+    ],
     "author": "Roi Avinoam <avinoamr@gmail.com>",
     "contributors": [
         "Feross Aboukhadijeh <feross@feross.org> (http://feross.org)",
@@ -13,7 +19,7 @@
         "url": "https://github.com/avinoamr/connect-slashes.git"
     },
     "devDependencies": {
-        "mocha": "~1.14.0"
+        "mocha": "~5.2.0"
     },
     "scripts": {
         "test": "node_modules/mocha/bin/mocha"
