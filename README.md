@@ -49,7 +49,7 @@ You can also set additional headers to the redirect response with the `headers` 
 
 ## Notes
 
-1. Only GET requests will be redirected (to avoid losing POST/PUT data)
+1. Only GET, HEAD, and OPTIONS requests will be redirected (to avoid losing POST/PUT data)
 2. This middleware will append or remove a trailing slash to all request urls. This includes filenames (/app.css => /app.css/), so it may break your static files. Make sure to `.use()` this middleware only after the `connect.static()` middleware.
 
 ## LICENSE
