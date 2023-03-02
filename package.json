@@ -19,7 +19,7 @@
         "url": "https://github.com/avinoamr/connect-slashes.git"
     },
     "devDependencies": {
-        "mocha": "^5.2.0"
+        "mocha": "^10.2.0"
     },
     "scripts": {
         "test": "node_modules/mocha/bin/mocha"
